@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;VoiceServer&gt;">
+    <CLASSES>
+      <root url="file://C:/Go/3rd/src/google.golang.org" />
+      <root url="file://C:/Go/3rd/src/golang.org" />
+      <root url="file://C:/Go/3rd/src/github.com" />
+    </CLASSES>
+    <SOURCES />
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

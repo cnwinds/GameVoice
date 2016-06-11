@@ -1,0 +1,8 @@
+{
+    "port": 8898,
+    "auth" : "none",
+    "radiusIp" : "192.168.99.100",
+    "radiusSecret" : "LpWE9AtfDPQ3ufXBS6gJ37WW8TnSF920",
+    "radiusAuthPort" : 32769,
+    "radiusAcctPort" : 32768
+}

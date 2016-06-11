@@ -1,0 +1,82 @@
+syntax="proto3";
+
+package voice;
+
+enum MSG {
+    PKT_NONE = 0;
+    PKT_HANDSHAKE = 1;
+    PKT_HANDSHAKE_ACK = 2;
+    PKT_CREATE_GROUP = 3;
+    PKT_ADD_PLAYER = 4;
+    PKT_ADD_PLAYER_ACK = 5;
+    PKT_REMOVE_PLAYER = 6;
+    PKT_DESTROY_GROUP = 7;
+    PKT_ADJUST_PLAYER_ATTR = 8;
+    PKT_ADJUST_GROUP_ATTR = 9;
+}
+
+message Handshake {
+    uint32 ID = 1 [default = PKT_HANDSHAKE];
+    string ProductKey = 2;
+}
+
+message HandshakeAck {    
+}
+
+message CreateGroup {
+    uint64 groupId = 1;
+}
+
+message AddPlayer {
+    uint64 groupId = 1;
+    uint64 playerId = 2;
+    uint32 canSpeak = 3;
+}
+
+message AddPlayerAck {
+    uint64 groupId = 1;
+    uint64 playerId = 2;
+    uint32 playerIndex = 3;
+}
+
+message RemovePlayer {
+    uint64 groupId = 1;
+    uint64 playerId = 2;
+}
+
+message DestroyGroup {
+    uint64 groupId = 1;
+}
+
+message AdjustPlayerAttr {
+    uint64 playerId = 1;
+    uint32 canSpeak = 2;
+}
+
+message Request {
+    Handshake handshake = 1;
+    CreateGroup createGroup = 2;
+    AddPlayer addPlayer = 3;
+    RemovePlayer removePlayer = 4;
+    DestroyGroup destroyGropu = 5;
+    AdjustPlayerAttr adjustPlayerAttr = 6;
+}
+
+enum ACK {
+    ACK_OK = 0;
+    ACK_HANDSHAKE_FAILED = 1;
+    ACK_ADD_PLAYER_FAILED = 2;
+}
+
+message Response {
+    ACK Code = 1;
+    string ErrMsg = 2;
+
+    HandshakeAck handshakeAck = 3;
+    AddPlayerAck addPlayerAck = 4;
+}
+
+message Message {
+    Request request = 1;
+    Response response = 2;
+}

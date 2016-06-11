@@ -1,0 +1,84 @@
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:             178.980 kb/s
+maximum bitrate:             716.722 kb/s
+bitrate standard deviation:  119.625 kb/s
+Test vector PASSES
+Opus quality metric: 99.8 % (internal weighted error is 0.000569)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:              22.084 kb/s
+maximum bitrate:             144.426 kb/s
+bitrate standard deviation:   24.566 kb/s
+Test vector PASSES
+Opus quality metric: 100.0 % (internal weighted error is 0.000000)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:              25.287 kb/s
+maximum bitrate:             151.410 kb/s
+bitrate standard deviation:   26.808 kb/s
+Test vector PASSES
+Opus quality metric: 100.0 % (internal weighted error is 0.000000)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:              22.220 kb/s
+maximum bitrate:             114.059 kb/s
+bitrate standard deviation:   19.000 kb/s
+Test vector PASSES
+Opus quality metric: 100.0 % (internal weighted error is 0.000000)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:              41.210 kb/s
+maximum bitrate:              99.000 kb/s
+bitrate standard deviation:   18.671 kb/s
+Test vector PASSES
+Opus quality metric: 99.8 % (internal weighted error is 0.000468)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:              42.388 kb/s
+maximum bitrate:             114.000 kb/s
+bitrate standard deviation:   21.559 kb/s
+Test vector PASSES
+Opus quality metric: 99.8 % (internal weighted error is 0.000384)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:              62.721 kb/s
+maximum bitrate:             618.255 kb/s
+bitrate standard deviation:   84.010 kb/s
+Test vector PASSES
+Opus quality metric: 99.6 % (internal weighted error is 0.000977)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:              38.127 kb/s
+maximum bitrate:             201.509 kb/s
+bitrate standard deviation:   44.458 kb/s
+Test vector PASSES
+Opus quality metric: 99.6 % (internal weighted error is 0.000953)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:             228.550 kb/s
+maximum bitrate:             495.434 kb/s
+bitrate standard deviation:  193.402 kb/s
+Test vector PASSES
+Opus quality metric: 99.5 % (internal weighted error is 0.001182)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:             182.195 kb/s
+maximum bitrate:             715.397 kb/s
+bitrate standard deviation:  179.946 kb/s
+Test vector PASSES
+Opus quality metric: 99.2 % (internal weighted error is 0.001845)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:              95.104 kb/s
+maximum bitrate:             218.902 kb/s
+bitrate standard deviation:   62.045 kb/s
+Test vector PASSES
+Opus quality metric: 99.7 % (internal weighted error is 0.000821)
+libopus 1.1.2
+Decoding with 48000 Hz output (2 channels)
+average bitrate:              13.828 kb/s
+maximum bitrate:              28.800 kb/s
+bitrate standard deviation:    5.660 kb/s
+Test vector PASSES
+Opus quality metric: 99.9 % (internal weighted error is 0.000355)

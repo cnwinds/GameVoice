@@ -1,0 +1,139 @@
+syntax="proto3";
+
+package message;
+
+enum MSG_CONST {
+    option allow_alias = true;
+    CONST_VALUE = 0;
+    MAX_PACKET_SIZE = 1024;
+    MAX_VOICE_PACKET_SIZE = 1024;
+}
+
+enum MSG {
+    NONE = 0;
+    HANDSHAKE = 1;
+    HANDSHAKE_ACK = 2;
+    ENTER_GROUP = 3;
+    ENTER_GROUP_ACK = 4;
+    NOTIFY_ENTER_GROUP = 5;
+    NOTIFY_LEAVE_GROUP = 6;
+    LEAVE_GROUP = 7;
+    ADJUST_PLAYER_ATTR = 8;
+    ADJUST_GROUP_ATTR = 9;
+}
+
+enum ACK {
+    OK = 0;
+    HANDSHAKE_FAILED = 1;
+    ADD_PLAYER_FAILED = 2;
+}
+
+message Handshake {
+    string ProductKey = 2;
+}
+
+message HandshakeAck {    
+}
+
+message EnterGroup {
+    uint64 groupId = 1;
+    uint64 playerId = 2;
+    uint32 canSpeak = 3;
+}
+
+message EnterGroupAck {
+    uint64 groupId = 1;
+    uint64 playerId = 2;
+    uint32 playerIndex = 3;
+}
+
+message NotifyEnterGroup {
+    uint64 groupId = 1;
+    uint64 playerId = 2;
+    uint32 canSpeak = 3;
+}
+
+message NotifyLeaveGroup {
+    uint64 groupId = 1;
+    uint64 playerId = 2;
+}
+
+message LeaveGroup {
+    uint64 groupId = 1;
+    uint64 playerId = 2;
+}
+
+message AdjustPlayerAttr {
+    uint64 groupId = 1;
+    uint64 playerId = 2;
+    uint32 canSpeak = 3;
+}
+
+message Request {
+    Handshake handshake = 1;
+    EnterGroup enterGroup = 2;
+    LeaveGroup leaveGroup = 3;
+    AdjustPlayerAttr adjustPlayerAttr = 4;
+}
+
+message Response {
+    ACK Code = 1;
+    // string ErrMsg = 2;
+
+    HandshakeAck handshakeAck = 3;
+    EnterGroupAck enterGroupAck = 4;
+}
+
+message Noitfy {
+    NotifyEnterGroup notifyEnterGroup = 1;
+    NotifyLeaveGroup notifyLeaveGroup = 2;
+}
+
+message ControlMessage {
+    Request req = 1;
+    Response res = 2;
+    Noitfy notify = 3;
+}
+
+//////////////////////////////////////////////////////////////
+
+enum VOICE_MSG {
+    VOICE_MSG_NONE = 0;
+    REQEUST_CONNECT = 1;
+    REQEUST_CONNECT_ACK = 2;
+    VOICE_DATA = 3;
+    VOICE_HEARTBEAT = 4;
+}
+
+enum VOICE_ACK {
+    VOICE_OK = 0;
+}
+
+message PlayerRequestConnect {
+	uint32 PlayerIndex = 1;
+	uint64 PlayerID = 2;
+	uint64 GroupID = 3;
+}
+
+message PlayerRequestConnectAck {
+	VOICE_ACK Code = 1;
+}
+
+message VoiceData {
+	uint32 PlayerIndex = 1;
+	uint64 PlayerID = 2;
+	uint32 FrameIndex = 3;
+	bytes Data = 4;
+}
+
+message VoiceHeartbeat {
+	uint32 PlayerIndex = 1;
+	uint64 PlayerID = 2;
+}
+
+message VoiceMessage {
+    PlayerRequestConnect playerRequestConnect = 1;
+    PlayerRequestConnectAck playerRequestConnectAck = 2;
+    VoiceData voiceData = 3;
+    VoiceHeartbeat voiceHeartbeat = 4;
+}
